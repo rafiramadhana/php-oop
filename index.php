@@ -2,7 +2,13 @@
 
     class User {
 
-        // properties methods
+        public $username = 'ryu';
+        public $email = 'ryu@tnn.co.uk';
+
+        public function addFriend() {
+            $this->username;
+            return "$this->username ($this->email) added a new friend!";
+        }
 
     }
 
@@ -10,9 +16,19 @@
     $userOne = new User();
     $userTwo = new User();
 
-    // get base class
-    echo 'the class is: ' . get_class(($userOne));
-    echo 'the class is: ' . get_class(($userTwo));
+    echo $userOne->username . '<br>';
+    echo $userOne->email . '<br>';
+    echo $userOne->addFriend() . '<br>';
+
+    $userTwo->username = 'maria';
+    $userTwo->email = 'maria@tnn.co.uk';
+    echo $userTwo->username . '<br>';
+    echo $userTwo->email . '<br>';
+    echo $userTwo->addFriend() . '<br>';
+
+    // get available vars and methods
+    // print_r(get_class_vars('User'));
+    // print_r(get_class_methods('User'))
 
 ?>
 
