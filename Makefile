@@ -3,4 +3,4 @@ run: stop
 	@docker ps --filter "name=php-oop"
 
 stop:
-	@-docker kill thenetninja-php
+	@-docker kill php-oop
